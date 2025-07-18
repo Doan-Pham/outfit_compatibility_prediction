@@ -1,6 +1,6 @@
 ## Introduction
 - An OutfitTransformer AI model for Outfit Compatibility Prediction
-- Reserach paper for reference: [OutfitTransformer: Outfit Representations for Fashion Recommendation](https://arxiv.org/abs/2204.04812) by Rohan Sarkar, Navaneeth Bodla, Mariya I. Vasileva, Yen-Liang Lin, Anurag Beniwal, Alan and và Gerard Medioni
+- Research paper for reference: [OutfitTransformer: Outfit Representations for Fashion Recommendation](https://arxiv.org/abs/2204.04812) by Rohan Sarkar, Navaneeth Bodla, Mariya I. Vasileva, Yen-Liang Lin, Anurag Beniwal, Alan and Gerard Medioni
 - Tech stack: Python, Numpy, Pytorch, Streamlit
 ## Setup
 1. Clone this repository with [Git](https://git-scm.com)
@@ -31,7 +31,7 @@ conda activate outfit_recommendation
 ```bash
 python main.py
 ```
-By default, the training will not be carried out on the whole dataset. Instead, the model is only trained on a data subset for illustration purpose. To train the model with the whole subset, run the following command:
+By default, the training will not be carried out on the whole dataset. Instead, the model is only trained on a data subset for illustration purposes. To train the model with the whole subset, run the following command:
 ```bash
 python main.py --run_real 1
 ```
@@ -64,11 +64,11 @@ options:
                         The split of the polyvore data (disjoint or nondisjoint)    
   --epochs EPOCHS       Number of epochs to train for (default: 10)
 ```
-For example: If you want to run `python main.py` to train model in 15 epochs, with batch size being 30 items. Also, you want to get training data from `data.zip` file instead of the extracted folder, and train on the whole dataset. You can run the folliwing command:
+For example: If you want to run `python main.py` to train model in 15 epochs, with batch size being 30 items. Also, you want to get training data from `data.zip` file instead of the extracted folder, and train on the whole dataset. You can run the following command:
 ```bash
 python main.py --epochs 15 --batch_size 30 --datazip data.zip --run_real 1
 ```
-**Note**: Training with a large amount of data on your local machien can causes IDE crash due to out-of-memory error. You can reduce bacth_size or leave --run_real as 0 (Or use cloud solutions for training model).
+**Note**: Training with a large amount of data on your local machine can cause IDE crash due to out-of-memory error. You can reduce bacth_size or leave --run_real as 0 (Or use cloud solutions for training model).
 4. After training the model for at least 1 epoch (Or you can download [a pre-trained model here(240 MB)](https://drive.google.com/file/d/1GnA3LGX_bTvWn08k0SPaEzNaxHSSljMn/view?usp=sharing) and extract to the repository directory), You can run the following command to open the demo app. This app will apply the parameters from `best_state.pt` to give inferences:
 ```bash
 streamlit run demo_app.py
