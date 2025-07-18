@@ -75,8 +75,7 @@ streamlit run demo_app.py
 ```
 
 ## Authors:
-
-Pham Truong Hai Doan (Leader) - Build and train model
-Mai Pham Quoc Hung - Build demo app
+- Pham Truong Hai Doan (Leader) - Build and train model
+- Mai Pham Quoc Hung - Build demo app
 
 
